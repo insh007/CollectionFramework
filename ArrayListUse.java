@@ -8,7 +8,7 @@ public class ArrayListUse {
         //Note : Type argument cannot be of primitive type
         /*
         * The following line of code is invalid in Java:
-        *   ArrayList<int> numbers = new ArrayList<int>(); // This is wrong
+        * ArrayList<int> numbers = new ArrayList<int>(); // This is wrong
         * This is because Java's generics only work with reference types, not primitive types.
         * Here, Integer is the wrapper class for the primitive type int. Java's ArrayList (and all other generic types) can only accept reference types like Integer, String, etc.
         * */
