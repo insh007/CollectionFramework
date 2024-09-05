@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class ArrayListUse {
     public static void main(String [] args) {
         ArrayList<Integer> numbers = new ArrayList<Integer>();
-//        ArrayList<Integer> numbers = new ArrayList<>(); // This will work, added Note below.
+//      ArrayList<Integer> numbers = new ArrayList<>(); // This will work, added Note below.
 
         //Note : Type argument cannot be of primitive type
         /*
