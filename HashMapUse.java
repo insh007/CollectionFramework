@@ -5,7 +5,7 @@ public class HashMapUse {
     public static void main(String [] args) {
 //        HashMap<Integer, String> map = new HashMap<Integer, String>();
 //        HashMap<Integer, String> map = new HashMap<>();
-        // Below is working because HashMap is implementing Map Interface
+        // Below is working because HashMap is implementing Map Interface.
         Map<Integer, String> map = new HashMap<>();
 
         map.put(1, "one");
