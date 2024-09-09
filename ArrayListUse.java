@@ -1,8 +1,10 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class ArrayListUse {
     public static void main(String [] args) {
-        ArrayList<Integer> numbers = new ArrayList<Integer>();
+//        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        List<Integer> numbers = new ArrayList<Integer>(); // This will work because ArrayList is implements the List Interface.
 //      ArrayList<Integer> numbers = new ArrayList<>(); // This will work, added Note below.
 
         //Note : Type argument cannot be of primitive type
