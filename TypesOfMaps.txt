@@ -1,0 +1,92 @@
+In Java, the Map interface represents a data structure that stores key-value pairs. Each key in a Map is unique, and it can have only one value associated with it. Java provides several implementations of the Map interface, each having its own characteristics and use cases.
+
+ Here are the common types of Map in Java:
+
+ 1. HashMap:
+    Overview: HashMap is the most commonly used implementation of the Map interface. It uses a hash table to store key-value pairs and provides constant-time performance for basic operations like get() and put(), assuming the hash function disperses elements properly.
+    Order: Does not maintain any order of keys or values.
+    Null keys and values: Allows one null key and multiple null values.
+    Performance: Provides good performance for most cases, but the performance can degrade if there are too many hash collisions.
+
+Example:
+
+Map<String, Integer> hashMap = new HashMap<>();
+hashMap.put("Apple", 1);
+hashMap.put("Banana", 2);
+
+2. LinkedHashMap:
+Overview: LinkedHashMap is similar to HashMap, but it maintains a doubly linked list to keep track of the insertion order of keys. This makes it predictable when you iterate over the map.
+Order: Maintains the insertion order of keys. You can also configure it to maintain access order (i.e., based on when keys were last accessed).
+Null keys and values: Allows one null key and multiple null values, just like HashMap.
+Performance: Slightly slower than HashMap due to the overhead of maintaining the linked list for order tracking.
+Example:
+Map<String, Integer> linkedHashMap = new LinkedHashMap<>();
+linkedHashMap.put("Apple", 1);
+linkedHashMap.put("Banana", 2);
+
+3. TreeMap:
+Overview: TreeMap implements the Map interface using a red-black tree (a self-balancing binary search tree). It provides a naturally sorted map.
+Order: Maintains keys in sorted order (by natural ordering or a custom comparator).
+Null keys and values: Does not allow null keys (but allows multiple null values). Attempting to insert a null key will throw a NullPointerException.
+Performance: Operations like put() and get() take O(log n) time because of the underlying tree structure. It is slower than HashMap for most operations, but it's useful when you need sorted data.
+Example:
+
+Map<String, Integer> treeMap = new TreeMap<>();
+treeMap.put("Banana", 2);
+treeMap.put("Apple", 1);  // "Apple" will appear before "Banana" because of natural ordering
+
+4. Hashtable:
+Overview: Hashtable is a legacy class that predates the Map interface. It is similar to HashMap, but it's synchronized (i.e., thread-safe).
+Order: Does not maintain any order.
+Null keys and values: Does not allow null keys or values. If you try to insert null values, it throws a NullPointerException.
+Performance: Slower compared to HashMap due to synchronization overhead, making it less commonly used in modern Java code. If you need a synchronized Map, consider using ConcurrentHashMap instead.
+Example:
+
+Map<String, Integer> hashtable = new Hashtable<>();
+hashtable.put("Apple", 1);
+hashtable.put("Banana", 2);
+
+5. ConcurrentHashMap:
+Overview: ConcurrentHashMap is a thread-safe implementation of Map designed for high concurrency. Unlike Hashtable, it does not lock the entire map when performing updates, allowing multiple threads to read and write concurrently without locking the entire map.
+Order: Does not maintain any order of keys or values.
+Null keys and values: Does not allow null keys or values (similar to Hashtable).
+Performance: Much more efficient than Hashtable in a multithreaded environment because it uses finer-grained locking (lock-striping) to allow concurrent updates.
+Example:
+
+Map<String, Integer> concurrentHashMap = new ConcurrentHashMap<>();
+concurrentHashMap.put("Apple", 1);
+concurrentHashMap.put("Banana", 2);
+
+6. WeakHashMap:
+Overview: WeakHashMap is a specialized Map implementation where the keys are held using weak references. This means that if no strong references to a key exist, the key-value pair can be garbage-collected. It is useful in scenarios where you want the Map to automatically discard entries if they are no longer referenced.
+Order: Does not maintain any order of keys or values.
+Null keys and values: Allows null keys and values.
+Performance: Similar to HashMap, but entries can be garbage collected when keys are no longer strongly referenced, so it's used for caching or memory-sensitive applications.
+Example:
+
+Map<String, Integer> weakHashMap = new WeakHashMap<>();
+weakHashMap.put("Apple", 1);
+weakHashMap.put("Banana", 2);
+
+7. IdentityHashMap:
+Overview: IdentityHashMap is a special type of Map that uses reference equality (==) instead of object equality (equals()) to compare keys. This means it only considers two keys equal if they are the exact same object in memory, not just logically equal.
+Order: Does not maintain any order.
+Null keys and values: Allows null keys and values.
+Performance: Similar to HashMap but with the special behavior of comparing keys by reference rather than value.
+Example:
+
+Map<String, Integer> identityHashMap = new IdentityHashMap<>();
+identityHashMap.put("Apple", 1);
+identityHashMap.put(new String("Apple"), 2); // Considered a different key even though it’s the same string content
+
+8. EnumMap:
+Overview: EnumMap is a specialized Map for use with enum keys. It is a very efficient implementation because it takes advantage of the fact that enum values are known at compile-time.
+Order: Maintains the natural order of the enum keys.
+Null keys and values: Does not allow null keys, but allows null values.
+Performance: Highly efficient in terms of performance and memory usage when used with enums as keys.
+Example:
+
+enum Day { MONDAY, TUESDAY, WEDNESDAY }
+Map<Day, String> enumMap = new EnumMap<>(Day.class);
+enumMap.put(Day.MONDAY, "Start of the week");
+
