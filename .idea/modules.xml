@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CollectionFrameworkRelated/CollectionFrameworkRelated.iml" filepath="$PROJECT_DIR$/CollectionFrameworkRelated/CollectionFrameworkRelated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CollectionFrameworkRelated/src/Java-Related.iml" filepath="$PROJECT_DIR$/CollectionFrameworkRelated/src/Java-Related.iml" />
+    </modules>
+  </component>
+</project>

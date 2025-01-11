@@ -49,5 +49,6 @@ public class ArrayListUse {
         * 2. ArrayList<Integer> numbers = new ArrayList<>();
             This is a shorthand introduced in Java 7 through a feature called "diamond operator" (<>). The diamond operator allows the compiler to infer the type parameters from the variable's declaration on the left side (ArrayList<Integer>), so you don't need to specify the type again on the right side. This makes the code cleaner and avoids redundancy, but it provides the same result as the first example.
         * */
+
     }
 }
