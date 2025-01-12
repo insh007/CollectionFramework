@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/CollectionFrameworkEngineeringDigest/CollectionFrameworkEngineeringDigest.iml" filepath="$PROJECT_DIR$/CollectionFrameworkEngineeringDigest/CollectionFrameworkEngineeringDigest.iml" />
       <module fileurl="file://$PROJECT_DIR$/CollectionFrameworkRelated/CollectionFrameworkRelated.iml" filepath="$PROJECT_DIR$/CollectionFrameworkRelated/CollectionFrameworkRelated.iml" />
       <module fileurl="file://$PROJECT_DIR$/CollectionFrameworkRelated/src/Java-Related.iml" filepath="$PROJECT_DIR$/CollectionFrameworkRelated/src/Java-Related.iml" />
     </modules>
