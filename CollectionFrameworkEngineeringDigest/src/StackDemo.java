@@ -45,5 +45,7 @@ public class StackDemo {
         arrayList.add(3);
         arrayList.get(arrayList.size() - 1); // peek
         arrayList.remove(arrayList.size() - 1); // pop
+
+//        Note: Stack extends Vector
     }
 }
